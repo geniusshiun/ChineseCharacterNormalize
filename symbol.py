@@ -6,7 +6,9 @@ def strQ2B(ustring):
         if inside_code==0x3000:
             inside_code=0x0020
         else:
-            inside_code-=0xfee0
+            if (inside_code-0xfee0 > 0):
+                inside_code-=0xfee0
+
         if inside_code<0x0020 or inside_code>0x7e:   #轉完之後不是半形字元返回原來的字元
             rstring.append(uchar)
         else:
@@ -31,6 +33,15 @@ def strB2Q(ustring):
 
 if __name__ == '__main__':
     newword = strB2Q('。天abc123!@#$%^&*()_+[]\/.,~`}{":?><')
-    print(newword)
-    print(strQ2B(newword))
-    print(strQ2B('ＡＢＣ！！！$@#＠＃＄＠＃％）（＠＊!!１２３４５!!'))
+    #print(newword)
+    #print(strQ2B(newword))
+    #print(strQ2B('ＡＢＣ！！！$@#＠＃＄＠＃％）（＠＊!!１２３４５!!•╳'))
+    specialmapping = {'•':'§','╳':'§'}
+    othersymbol = [';','[',']','*','%',"'",'`','=','#','^','@','<','>','\\','$','}','{']
+    mappingtable = {'（':'(','）':')','－':'-','＿':'_','，':',','＋':'+','—':'-','／':'/','“':'"', '”':'"','？':'?',
+                '　':' ','	':' ','‧':'.','！':'!','．':'.','＆':'&','：':':','ㄟ':'誒','ㄉ':'的','㖈':'老','～':'~'}
+    for full,half in mappingtable.items():
+        if strQ2B(full) != half:
+            print(full,half,strQ2B(full))
+    
+    
