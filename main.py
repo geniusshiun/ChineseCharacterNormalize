@@ -24,19 +24,31 @@ def strQ2B(ustring):
 
     return ''.join(rstring)
 def strNormalize(data):
-    from CNtool import hantoutf32,utf32toutf16
-    import re
-    import json
+    # from CNtool import hantoutf32,utf32toutf16
+    # import re
+    # import json
     _transferSymbol_non = []
     tradition = '廠幾兒虧與萬億個勺麼廣門義屍衛飛習馬鄉豐開無專扎藝廳區歷車岡貝見氣長僕幣僅從倉風勻烏鳳為憶訂計認隊辦勸書擊撲節術厲龍滅軋東業舊帥歸葉電號叨嘆們儀叢樂處鳥務飢閃蘭匯頭漢寧討寫讓禮訓議訊記遼邊發聖對糾絲動執鞏擴掃揚場亞朴機權過協壓厭頁奪達夾軌邁畢貞師塵當嚇蟲團嗎嶼歲豈剛則網遷喬偉傳優傷價華偽會殺眾爺傘創肌雜負壯沖莊慶劉齊產決閉問闖並關湯興講軍許論農諷設訪尋迅盡導異孫陣陽階陰婦媽戲觀歡買紅纖級約紀馳壽麥進遠違運撫壇壞擾壩貢搶墳坊護殼塊聲報蒼嚴蘆勞蘇極楊兩麗醫辰勵還殲來連堅時吳縣園曠圍噸郵員聽嗚崗帳財針釘亂體伶徹余鄰腸龜猶條飯飲凍狀畝況庫療應這棄冶閒間悶灶燦沃溝懷憂窮災證啟評補識訴診詞譯靈層遲張際陸陳勁雞驅純紗納綱駁縱紛紙紋紡驢紐環責現規攏揀擔頂擁勢攔撥擇蘋莖櫃槍構傑喪畫棗賣礦碼廁奮態歐壟轟頃轉斬輪軟齒虜腎賢國暢鳴詠羅幟嶺凱敗販購圖釣偵側憑僑貨質徑貪貧膚腫脹脅魚備飾飽飼變廟劑廢淨閘鬧鄭單爐淺淚瀉潑澤憐學寶審簾實試詩誠襯視話誕詢該詳肅錄隸屆陝限駕參艱線練組細駛織終駐駝紹經貫幫掛項撓趙擋墊擠揮薦帶繭蕩榮藥標棟欄樹咸磚砌牽殘輕鴉戰點臨覽豎削嘗顯啞貴蝦蟻螞雖罵嘩響峽罰賤鈔鐘鋼鑰鉤選適種復倆貸順儉須劍膽勝脈狹獅獨獄貿饒蝕餃餅彎將獎瘡瘋親聞閥閣養類逆總煉爛潔灑澆濁測濟渾濃惱舉覺憲竊語襖誤誘說誦墾晝險嬌賀壘綁絨結繞驕繪給絡駱絕絞統豔蠶頑撈載趕鹽損撿換熱恐壺蓮獲惡檔橋礎顧轎較頓斃慮監緊黨曬曉暈喚罷圓賊賄錢鉗鑽鐵鈴鉛犧敵積稱筆筍債傾艦艙愛頌胳髒膠腦皺餓戀槳漿離資閱煩燒燭遞濤澇潤漲燙湧寬賓請諸讀襪課誰調諒談誼剝懇劇難預絹驗繼掠職蘿營夢檢聾襲輔輛虛懸嶄銅鏟銀籠償銜盤鴿領臉獵餡館癢蓋斷獸漸漁滲慚驚慘慣窯謀謊禍謎彈隱嬸頸績緒續騎繩維綿綢綠趨擱摟攪聯確暫輩輝賞噴踐遺賭賠鑄鋪鏈銷鎖鋤鍋鏽鋒銳筐築篩儲懲釋臘魯饞蠻闊糞濕灣憤竄窩褲謝謠謙屬屢緞緩編騙緣攝擺攤鵲藍獻樓賴霧輸齡鑑錯錫鑼錘錦鍵鋸矮辭籌簽簡騰觸醬糧數滿濾濫滾濱灘譽謹縫纏牆願顆蠟蠅賺鍬鍛穩籮饅賽譜騾縮囑鎮顏額聰櫻飄瞞題顛贈鏡贊籃辯懶繳辮驟鐮侖譏鄧盧嘰爾馮迂籲吆倫鳧妝汛諱訝訛訟訣馱馴紉瑪韌摳掄塢擬蕪葦杈軒鹵嘔嗆嶇佃狽鳩廬閏兌瀝淪洶滄滬詛詐墜緯坯樞楓礬毆曇嚨賬貶貯俠僥劊覓龐瘧濘寵詭屜彌參紳駒絆繹貳挾莢蕎薺葷熒棧硯鷗軸勳喲鈣鈍鈉欽鈞鈕氫朧餌巒颯閨閩婁爍炫窪誡誣誨遜隕駭摯搗聶荸萊瑩鶯棲樺樁賈礫嘮鴦贓鉀鉚秫賃聳頒臍膿鴕鴛餒齋渦渙滌澗澀憫竅諾誹諄駿瑣麩擲撣摻螢蕭薩醞碩顱晤囉嘯邏銬鐺鋁鍘銑銘矯秸穢軀斂閻闡煥鴻淵諜諧襠袱禱謁謂諺頗綽繃綜綻綴瓊攬攙蔣韓頰靂翹鑿喳晾疇鵑賦贖賜銼鋅牘憊瘓滯潰濺謗緬纜締縷騷鵡欖輻輯頻蹺錨錐鍁錠錳頹膩鵬雛饃餾稟痺謄寢褂裸謬繽贅蔫藹鹼轅轄蟬鍍簫輿譚纓攆鑷鎬簍鯉癟癱瀾譴鶴繚轍鸚籬鯨瀕韁贍鐐鱷囂鰭癩攢鬢躪鑲'
     simple = '厂几儿亏与万亿个勺么广门义尸卫飞习马乡丰开无专扎艺厅区历车冈贝见气长仆币仅从仓风匀乌凤为忆订计认队办劝书击扑节术厉龙灭轧东业旧帅归叶电号叨叹们仪丛乐处鸟务饥闪兰汇头汉宁讨写让礼训议讯记辽边发圣对纠丝动执巩扩扫扬场亚朴机权过协压厌页夺达夹轨迈毕贞师尘当吓虫团吗屿岁岂刚则网迁乔伟传优伤价华伪会杀众爷伞创肌杂负壮冲庄庆刘齐产决闭问闯并关汤兴讲军许论农讽设访寻迅尽导异孙阵阳阶阴妇妈戏观欢买红纤级约纪驰寿麦进远违运抚坛坏扰坝贡抢坟坊护壳块声报苍严芦劳苏极杨两丽医辰励还歼来连坚时吴县园旷围吨邮员听呜岗帐财针钉乱体伶彻余邻肠龟犹条饭饮冻状亩况库疗应这弃冶闲间闷灶灿沃沟怀忧穷灾证启评补识诉诊词译灵层迟张际陆陈劲鸡驱纯纱纳纲驳纵纷纸纹纺驴纽环责现规拢拣担顶拥势拦拨择苹茎柜枪构杰丧画枣卖矿码厕奋态欧垄轰顷转斩轮软齿虏肾贤国畅鸣咏罗帜岭凯败贩购图钓侦侧凭侨货质径贪贫肤肿胀胁鱼备饰饱饲变庙剂废净闸闹郑单炉浅泪泻泼泽怜学宝审帘实试诗诚衬视话诞询该详肃录隶届陕限驾参艰线练组细驶织终驻驼绍经贯帮挂项挠赵挡垫挤挥荐带茧荡荣药标栋栏树咸砖砌牵残轻鸦战点临览竖削尝显哑贵虾蚁蚂虽骂哗响峡罚贱钞钟钢钥钩选适种复俩贷顺俭须剑胆胜脉狭狮独狱贸饶蚀饺饼弯将奖疮疯亲闻阀阁养类逆总炼烂洁洒浇浊测济浑浓恼举觉宪窃语袄误诱说诵垦昼险娇贺垒绑绒结绕骄绘给络骆绝绞统艳蚕顽捞载赶盐损捡换热恐壶莲获恶档桥础顾轿较顿毙虑监紧党晒晓晕唤罢圆贼贿钱钳钻铁铃铅牺敌积称笔笋债倾舰舱爱颂胳脏胶脑皱饿恋桨浆离资阅烦烧烛递涛涝润涨烫涌宽宾请诸读袜课谁调谅谈谊剥恳剧难预绢验继掠职萝营梦检聋袭辅辆虚悬崭铜铲银笼偿衔盘鸽领脸猎馅馆痒盖断兽渐渔渗惭惊惨惯窑谋谎祸谜弹隐婶颈绩绪续骑绳维绵绸绿趋搁搂搅联确暂辈辉赏喷践遗赌赔铸铺链销锁锄锅锈锋锐筐筑筛储惩释腊鲁馋蛮阔粪湿湾愤窜窝裤谢谣谦属屡缎缓编骗缘摄摆摊鹊蓝献楼赖雾输龄鉴错锡锣锤锦键锯矮辞筹签简腾触酱粮数满滤滥滚滨滩誉谨缝缠墙愿颗蜡蝇赚锹锻稳箩馒赛谱骡缩嘱镇颜额聪樱飘瞒题颠赠镜赞篮辩懒缴辫骤镰仑讥邓卢叽尔冯迂吁吆伦凫妆汛讳讶讹讼诀驮驯纫玛韧抠抡坞拟芜苇杈轩卤呕呛岖佃狈鸠庐闰兑沥沦汹沧沪诅诈坠纬坯枢枫矾殴昙咙账贬贮侠侥刽觅庞疟泞宠诡屉弥叁绅驹绊绎贰挟荚荞荠荤荧栈砚鸥轴勋哟钙钝钠钦钧钮氢胧饵峦飒闺闽娄烁炫洼诫诬诲逊陨骇挚捣聂荸莱莹莺栖桦桩贾砾唠鸯赃钾铆秫赁耸颁脐脓鸵鸳馁斋涡涣涤涧涩悯窍诺诽谆骏琐麸掷掸掺萤萧萨酝硕颅晤啰啸逻铐铛铝铡铣铭矫秸秽躯敛阎阐焕鸿渊谍谐裆袱祷谒谓谚颇绰绷综绽缀琼揽搀蒋韩颊雳翘凿喳晾畴鹃赋赎赐锉锌牍惫痪滞溃溅谤缅缆缔缕骚鹉榄辐辑频跷锚锥锨锭锰颓腻鹏雏馍馏禀痹誊寝褂裸谬缤赘蔫蔼碱辕辖蝉镀箫舆谭缨撵镊镐篓鲤瘪瘫澜谴鹤缭辙鹦篱鲸濒缰赡镣鳄嚣鳍癞攒鬓躏镶'
+    outRange = {'力':'力','精':'精','量':'量','神':'神','數':'數','泥':'泥','更':'更','見':'見','勵':'勵',
+        '立':'立','狀':'狀','度':'度','離':'離','若':'若','金':'金','行':'行','勞':'勞','切':'切','歷':'歷', '年':'年'
+        ,'論':'論', '兩':'兩','福':'福', '利':'利','參':'參','類':'類', '流':'流', 'ㄧ':'一','北':'北','率':'率',
+        '降':'降', '領':'領','寮':'寮','復':'復','識':'識','車':'車','蓮':'蓮','略':'略','令':'令','不':'不',
+        '留':'留','路':'路', '塚':'塚','落':'落','理':'理', '例':'例','林':'林','練':'練', '錄':'錄','羅':'羅',
+        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女'}
     s2t = {}
     for index in range(len(tradition)):
         s2t[simple[index]] = tradition[index]
     specialmapping = {'•':'§','╳':'§'}
+    removeMapping = []
+    with open('removeMapping.txt','r',encoding='utf8') as f:
+        for line in f.readlines():
+            line = line.strip()
+            removeMapping.append(line)
     totalmapping = {}
     with open('hanMappingTable.txt','r',encoding='utf8') as f:
         totalmapping = json.loads(''.join(f.readlines()))
+    data = str(data).replace('\t','&***&')
     spaceIndex = [m.start() for m in re.finditer('(\s)',data)]
     data = str(data).replace(' ','')
     
@@ -52,8 +64,9 @@ def strNormalize(data):
         contiChi = chiList[0]
         transferdata = []
         for w in contiChi:
-            
-            if w in s2t:
+            if w in removeMapping:
+                transferdata.append(w)
+            elif w in s2t:
                 #STtransfer.append(w)
                 transferdata.append(s2t[w])
                 #print(w)
@@ -78,7 +91,9 @@ def strNormalize(data):
         noncontiChi = nonchiList[0]
         transferdata = []
         for w in noncontiChi:
-            if w in specialmapping:
+            if w in outRange:
+                transferdata.append(outRange[w])
+            elif w in specialmapping:
                 transferdata.append(specialmapping[w])
             else:
                 transfSymbol = strQ2B(w)
@@ -88,11 +103,12 @@ def strNormalize(data):
         transferdataDict[nonchiIndexList.pop(0)] = ''.join(transferdata)
         nonchiList.remove(noncontiChi)
     transferdataDict = dict(sorted(transferdataDict.items(), key = lambda x:x[0]))
+    _transferSymbol_non = list(re.sub('[A-Za-z0-9&*]','',''.join(list(set(_transferSymbol_non)))))
     _result = ''.join([item[1][1] for item in enumerate(transferdataDict.items())])
     while spaceIndex:
         index = spaceIndex.pop(0)
         _result = _result[:index]+' '+_result[index:]
-    
+    _result = _result.replace('&***&','\t')
     return _result,list(set(_transferSymbol_non))
     # for w in data:
     #     #print(w)
@@ -225,9 +241,22 @@ class WordCN(object):
         self.s2t = {}
         for index in range(len(tradition)):
             self.s2t[simple[index]] = tradition[index]
+        self.outRange = {'力':'力','精':'精','量':'量','神':'神','數':'數','泥':'泥','更':'更','見':'見','勵':'勵',
+        '立':'立','狀':'狀','度':'度','離':'離','若':'若','金':'金','行':'行','勞':'勞','切':'切','歷':'歷', '年':'年'
+        ,'論':'論', '兩':'兩','福':'福', '利':'利','參':'參','類':'類', '流':'流', 'ㄧ':'一','北':'北','率':'率',
+        '降':'降', '領':'領','寮':'寮','復':'復','識':'識','車':'車','蓮':'蓮','略':'略','令':'令','不':'不',
+        '留':'留','路':'路', '塚':'塚','落':'落','理':'理', '例':'例','林':'林','練':'練', '錄':'錄','羅':'羅',
+        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女'}
         self._STtransfer = []
         self._transferSymbol_non = []
+        self._removeMapping = []
+        with open('removeMapping.txt','r',encoding='utf8') as f:
+            for line in f.readlines():
+                line = line.strip()
+                self._removeMapping.append(line)
     def Normalize(self,data):
+        
+        data = data.replace('\t','&***&')
         spaceIndex = [m.start() for m in re.finditer('(\s)',data)]
         data = data.replace(' ','')
         chiIndexList = [m.start() for m in re.finditer('([一-龥]+)',str(data))]
@@ -239,7 +268,9 @@ class WordCN(object):
             contiChi = chiList[0]
             transferdata = []
             for w in contiChi:
-                if w in self.s2t:
+                if w in self._removeMapping:
+                    transferdata.append(w)
+                elif w in self.s2t:
                     self._STtransfer.append(w)
                     transferdata.append(self.s2t[w])
                 else:
@@ -262,7 +293,9 @@ class WordCN(object):
             noncontiChi = nonchiList[0]
             transferdata = []
             for w in noncontiChi:
-                if w in self.specialmapping:
+                if w in self.outRange:
+                    transferdata.append(self.outRange[w])
+                elif w in self.specialmapping:
                     transferdata.append(self.specialmapping[w])
                 else:
                     transfSymbol = strQ2B(w)
@@ -272,11 +305,14 @@ class WordCN(object):
             transferdataDict[nonchiIndexList.pop(0)] = ''.join(transferdata)
             nonchiList.remove(noncontiChi)
         transferdataDict = dict(sorted(transferdataDict.items(), key = lambda x:x[0]))
+        self._transferSymbol_non = list(re.sub('[A-Za-z0-9&*]','',''.join(list(set(self._transferSymbol_non)))))
+
         _result = ''.join([item[1][1] for item in enumerate(transferdataDict.items())])
         while spaceIndex:
             index = spaceIndex.pop(0)
             _result = _result[:index]+' '+_result[index:]
         #print(set(self.variants))
+        _result = _result.replace('&***&','\t')
         return _result
         # transferdata = []
         # for w in data:
@@ -353,8 +389,28 @@ class WordCN(object):
         #transfer character
         print(set(self.variants))
         # not transfer symbol
-        print(set(self._transferSymbol_non))
-                
+        #print(set(self._transferSymbol_non))
+        print('len of all data :',len(self.result))
+        
+        transferSymbol_non = re.sub('[A-Za-z0-9]','',''.join(list(set(self._transferSymbol_non))))
+        normalsymbol = list("!@#$%^&*()_+=-\][';/.,?><~`}{")
+        for symbol in transferSymbol_non:
+            if symbol in normalsymbol:
+                transferSymbol_non = transferSymbol_non.replace(symbol,'')
+        print(set(transferSymbol_non))
+        with open(self.f2+'variant','w',encoding='utf8') as f:
+            f.write(','.join(list(set(self.variants)))+'\n')
+        with open(self.f2+'checksymbol','w',encoding='utf8') as f:
+            for symbol in transferSymbol_non:
+                thistrun = []
+                index = 0
+                for line in self.result.split('\n'):
+                    if symbol in line:
+                        index+=1
+                        thistrun.append(line)
+                        if index > 5:
+                            break
+                f.write(symbol+'\t'+'\t'.join(thistrun)+'\n')
     def count_single(self, from_file, f_size):
         '''单进程读取文件并统计词频'''
         start = time.time()
@@ -401,7 +457,8 @@ class WordCN(object):
                 #return 
     def parse(self, line):  #解析读取的文件流
         #return re.sub(r'\s+','',line.decode(self.coding))
-        return self.Normalize(re.sub(r'\s+','',line.decode(self.coding)))
+        #return self.Normalize(re.sub(r'\s+','',line.decode(self.coding)))
+        return self.Normalize(line.decode(self.coding))
         
     def flush(self):  #清空统计结果
         self._cnlist = []
@@ -457,9 +514,14 @@ def main():
         w = WordCN(from_file, to_file, **args)
         w.run() 
         
-
+def test():
+    with open(r'Corpus\police1060101_1071220_GM','r',encoding='utf8') as f:
+        for line in f.readlines():
+            line = line.strip()
+            break
 if __name__ == '__main__':
     main()
+    #test()
 
 
 
