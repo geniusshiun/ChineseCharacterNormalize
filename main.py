@@ -35,7 +35,8 @@ def strNormalize(data):
         ,'論':'論', '兩':'兩','福':'福', '利':'利','參':'參','類':'類', '流':'流', 'ㄧ':'一','北':'北','率':'率',
         '降':'降', '領':'領','寮':'寮','復':'復','識':'識','車':'車','蓮':'蓮','略':'略','令':'令','不':'不',
         '留':'留','路':'路', '塚':'塚','落':'落','理':'理', '例':'例','林':'林','練':'練', '錄':'錄','羅':'羅',
-        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女'}
+        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女','⽈':'日','宅':'宅',
+        '良':'良','便':'便','隆':'隆','列':'列','㾗':'痕'}
     s2t = {}
     for index in range(len(tradition)):
         s2t[simple[index]] = tradition[index]
@@ -110,27 +111,7 @@ def strNormalize(data):
         _result = _result[:index]+' '+_result[index:]
     _result = _result.replace('&***&','\t')
     return _result,list(set(_transferSymbol_non))
-    # for w in data:
-    #     #print(w)
-    #     if len(re.findall('([一-龥]+)',w)) > 0:
-    #         index = hantoutf32(w)
-    #         try:
-    #             index16 = utf32toutf16(index)[3:-1].upper()
-    #             #print(index16)
-    #         except:
-    #             print('check',w)
-    #             continue
-    #         if index16 in totalmapping:
-    #             mappinghan = json.loads(utf32toutf16(totalmapping[index16]))
-    #             transferdata.append(mappinghan)
-    #         else:
-    #             transferdata.append(w)
-    #     else:
-    #         if w in specialmapping:
-    #             transferdata.append(specialmapping[w])
-    #         else:
-    #             transferdata.append(strQ2B(w))
-    # return (''.join(transferdata))
+    
 def humansize(size):
     """将文件的大小转成带单位的形式
     >>> humansize(1024) == '1 KB'
@@ -246,7 +227,8 @@ class WordCN(object):
         ,'論':'論', '兩':'兩','福':'福', '利':'利','參':'參','類':'類', '流':'流', 'ㄧ':'一','北':'北','率':'率',
         '降':'降', '領':'領','寮':'寮','復':'復','識':'識','車':'車','蓮':'蓮','略':'略','令':'令','不':'不',
         '留':'留','路':'路', '塚':'塚','落':'落','理':'理', '例':'例','林':'林','練':'練', '錄':'錄','羅':'羅',
-        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女'}
+        '聯':'聯', '濫':'濫', '廓':'廓', '里':'里','零':'零','䀚':'昂','㚈':'外','女':'女','⽈':'日','宅':'宅',
+        '良':'良','便':'便','隆':'隆','列':'列','㾗':'痕'}
         self._STtransfer = []
         self._transferSymbol_non = []
         self._removeMapping = []
@@ -314,28 +296,6 @@ class WordCN(object):
         #print(set(self.variants))
         _result = _result.replace('&***&','\t')
         return _result
-        # transferdata = []
-        # for w in data:
-        #     #print(w)
-        #     if len(re.findall('([一-龥]+)',w)) > 0:
-        #         index = hantoutf32(w)
-        #         try:
-        #             index16 = utf32toutf16(index)[3:-1].upper()
-        #             #print(index16)
-        #         except:
-        #             print('check',w)
-        #             continue
-        #         if index16 in self.totalmapping:
-        #             mappinghan = json.loads(utf32toutf16(self.totalmapping[index16]))
-        #             transferdata.append(mappinghan)
-        #         else:
-        #             transferdata.append(w)
-        #     else:
-        #         if w in self.specialmapping:
-        #             transferdata.append(self.specialmapping[w])
-        #         else:
-        #             transferdata.append(strQ2B(w))
-        # return (''.join(transferdata))
 
     def run(self):
         start = time.time()
@@ -389,18 +349,26 @@ class WordCN(object):
         #transfer character
         print(set(self.variants))
         # not transfer symbol
-        #print(set(self._transferSymbol_non))
-        print('len of all data :',len(self.result))
-        
         transferSymbol_non = re.sub('[A-Za-z0-9]','',''.join(list(set(self._transferSymbol_non))))
+        print(set(transferSymbol_non))
+        
+        checkVariant = {}
+        for w in list(set(self.variants)):
+            index = hantoutf32(w)
+            index16 = utf32toutf16(index)[3:-1].upper()
+            checkVariant[w] = json.loads(utf32toutf16(self.totalmapping[index16]))
+        print(checkVariant)
+
         normalsymbol = list("!@#$%^&*()_+=-\][';/.,?><~`}{")
         for symbol in transferSymbol_non:
             if symbol in normalsymbol:
                 transferSymbol_non = transferSymbol_non.replace(symbol,'')
-        print(set(transferSymbol_non))
+        
         with open(self.f2+'variant','w',encoding='utf8') as f:
-            f.write(','.join(list(set(self.variants)))+'\n')
+            f.write(str(checkVariant))
         with open(self.f2+'checksymbol','w',encoding='utf8') as f:
+            f.write(str(set(transferSymbol_non)))
+        with open(self.f2+'checksymbol_content','w',encoding='utf8') as f:
             for symbol in transferSymbol_non:
                 thistrun = []
                 index = 0
@@ -470,7 +438,7 @@ class WordCN(object):
     @property
     def result(self):  #返回统计结果的字符串型式，等同于要写入结果文件的内容
         #ss = ['{}: {}'.format(i, j) for i, j in self._c.most_common()]
-        result = '\n'.join(self._cnlist)
+        result = ''.join(self._cnlist)
         #print(result) 
         return result
 
@@ -516,9 +484,8 @@ def main():
         
 def test():
     with open(r'Corpus\police1060101_1071220_GM','r',encoding='utf8') as f:
-        for line in f.readlines():
-            line = line.strip()
-            break
+        print(f.readlines()[:3])
+            
 if __name__ == '__main__':
     main()
     #test()
